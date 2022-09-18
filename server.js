@@ -11,8 +11,8 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //Takes server to route files
-app.use('/', htmlRoutes);
-app.use('api', apiRoutes);
+app.use('/',htmlRoute);
+app.use('api',apiRoute);
 
 //Listener function
 app.listen(PORT, () => {
