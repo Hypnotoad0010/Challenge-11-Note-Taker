@@ -1,6 +1,6 @@
 //Loads modules
-const router = require("express").Router();
-const fs = require("fs");
+const router = require('express').Router();
+const fs = require('fs');
 
 //Api GET request
 router.get('/notes', (req, res) => {
