@@ -1,6 +1,7 @@
 const express= require('express');
-const htmlRoute = require('./routes/htmlRoutes');
-const apiRoute = require('./routes/htmlRoutes');
+
+const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 
 const app = express();
 //Port set to 3001
@@ -11,12 +12,10 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //Takes server to route files
-app.use('/',htmlRoute);
-app.use('api',apiRoute);
+app.use('/', htmlRoutes);
+app.use('api', apiRoutes);
 
 //Listener function
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
-
-
